@@ -1,0 +1,12 @@
+SAE 批量上传工具
+版本 0.1
+By http://www.shootsoft.net
+Source https://github.com/shootsoft/SAEMutipleUploads
+
+使用说明：
+将 SAE_PHP 目录下的文件上传到新浪的应用程序目录下
+启动 SAE Mutiple Uploads.exe 
+配置远程Url
+选择要上传的本地路径，点击上传后即开始上传。
+
+日志文件为Upload.log
