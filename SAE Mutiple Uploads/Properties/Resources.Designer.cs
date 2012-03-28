@@ -59,5 +59,12 @@ namespace SAE_Mutiple_Uploads.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Bitmap poweredby {
+            get {
+                object obj = ResourceManager.GetObject("poweredby", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

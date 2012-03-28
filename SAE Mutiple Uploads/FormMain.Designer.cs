@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.BackgroundWorkerUploading = new System.ComponentModel.BackgroundWorker();
             this.ButtonUpload = new System.Windows.Forms.Button();
             this.TextBoxUploadUrl = new System.Windows.Forms.TextBox();
@@ -43,8 +44,10 @@
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBarUploding = new System.Windows.Forms.ToolStripProgressBar();
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.PanelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BackgroundWorkerUploading
@@ -58,9 +61,9 @@
             // ButtonUpload
             // 
             this.ButtonUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonUpload.Location = new System.Drawing.Point(489, 120);
+            this.ButtonUpload.Location = new System.Drawing.Point(489, 97);
             this.ButtonUpload.Name = "ButtonUpload";
-            this.ButtonUpload.Size = new System.Drawing.Size(75, 39);
+            this.ButtonUpload.Size = new System.Drawing.Size(75, 36);
             this.ButtonUpload.TabIndex = 1;
             this.ButtonUpload.Text = "上传(&U)";
             this.ButtonUpload.UseVisualStyleBackColor = true;
@@ -72,16 +75,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TextBoxUploadUrl.Location = new System.Drawing.Point(124, 3);
             this.TextBoxUploadUrl.Name = "TextBoxUploadUrl";
-            this.TextBoxUploadUrl.Size = new System.Drawing.Size(417, 20);
+            this.TextBoxUploadUrl.Size = new System.Drawing.Size(417, 21);
             this.TextBoxUploadUrl.TabIndex = 2;
             this.TextBoxUploadUrl.Text = "http://";
             // 
             // ButtonLocal
             // 
             this.ButtonLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonLocal.Location = new System.Drawing.Point(517, 47);
+            this.ButtonLocal.Location = new System.Drawing.Point(517, 43);
             this.ButtonLocal.Name = "ButtonLocal";
-            this.ButtonLocal.Size = new System.Drawing.Size(24, 23);
+            this.ButtonLocal.Size = new System.Drawing.Size(24, 21);
             this.ButtonLocal.TabIndex = 3;
             this.ButtonLocal.Text = "...";
             this.ButtonLocal.UseVisualStyleBackColor = true;
@@ -92,33 +95,33 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.Size = new System.Drawing.Size(107, 12);
             this.label1.TabIndex = 4;
             this.label1.Text = "上传文件接收地址:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 29);
+            this.label2.Location = new System.Drawing.Point(51, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(59, 12);
             this.label2.TabIndex = 6;
             this.label2.Text = "命名空间:";
             // 
             // TextBoxNamespace
             // 
-            this.TextBoxNamespace.Location = new System.Drawing.Point(124, 25);
+            this.TextBoxNamespace.Location = new System.Drawing.Point(124, 23);
             this.TextBoxNamespace.Name = "TextBoxNamespace";
-            this.TextBoxNamespace.Size = new System.Drawing.Size(114, 20);
+            this.TextBoxNamespace.Size = new System.Drawing.Size(114, 21);
             this.TextBoxNamespace.TabIndex = 5;
             this.TextBoxNamespace.Text = "wordpress";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 51);
+            this.label3.Location = new System.Drawing.Point(51, 47);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 8;
             this.label3.Text = "本地路径:";
             // 
@@ -126,17 +129,18 @@
             // 
             this.TextBoxLocalPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxLocalPath.Location = new System.Drawing.Point(124, 49);
+            this.TextBoxLocalPath.Location = new System.Drawing.Point(124, 45);
             this.TextBoxLocalPath.Name = "TextBoxLocalPath";
-            this.TextBoxLocalPath.Size = new System.Drawing.Size(387, 20);
+            this.TextBoxLocalPath.Size = new System.Drawing.Size(387, 21);
             this.TextBoxLocalPath.TabIndex = 7;
             // 
             // LinkLabelAbout
             // 
+            this.LinkLabelAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LinkLabelAbout.AutoSize = true;
-            this.LinkLabelAbout.Location = new System.Drawing.Point(23, 146);
+            this.LinkLabelAbout.Location = new System.Drawing.Point(457, 138);
             this.LinkLabelAbout.Name = "LinkLabelAbout";
-            this.LinkLabelAbout.Size = new System.Drawing.Size(95, 13);
+            this.LinkLabelAbout.Size = new System.Drawing.Size(107, 12);
             this.LinkLabelAbout.TabIndex = 12;
             this.LinkLabelAbout.TabStop = true;
             this.LinkLabelAbout.Text = "www.shootsoft.net";
@@ -148,7 +152,7 @@
             this.toolStripStatusLabel1,
             this.StatusLabel,
             this.ProgressBarUploding});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 175);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 160);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(584, 22);
             this.statusStrip1.TabIndex = 13;
@@ -157,13 +161,13 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(31, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(32, 17);
             this.toolStripStatusLabel1.Text = "状态";
             // 
             // StatusLabel
             // 
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(31, 17);
+            this.StatusLabel.Size = new System.Drawing.Size(32, 17);
             this.StatusLabel.Text = "等待";
             // 
             // ProgressBarUploding
@@ -182,22 +186,34 @@
             this.PanelMain.Controls.Add(this.TextBoxLocalPath);
             this.PanelMain.Controls.Add(this.TextBoxNamespace);
             this.PanelMain.Controls.Add(this.label3);
-            this.PanelMain.Location = new System.Drawing.Point(20, 12);
+            this.PanelMain.Location = new System.Drawing.Point(20, 11);
             this.PanelMain.Name = "PanelMain";
-            this.PanelMain.Size = new System.Drawing.Size(544, 102);
+            this.PanelMain.Size = new System.Drawing.Size(544, 80);
             this.PanelMain.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = global::SAE_Mutiple_Uploads.Properties.Resources.poweredby;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 115);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 35);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 197);
+            this.ClientSize = new System.Drawing.Size(584, 182);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.LinkLabelAbout);
             this.Controls.Add(this.ButtonUpload);
-            this.MaximumSize = new System.Drawing.Size(2000, 235);
-            this.MinimumSize = new System.Drawing.Size(600, 235);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(2000, 220);
+            this.MinimumSize = new System.Drawing.Size(600, 220);
             this.Name = "FormMain";
             this.Text = "SAE 批量上传工具 0.1";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -205,6 +221,7 @@
             this.statusStrip1.PerformLayout();
             this.PanelMain.ResumeLayout(false);
             this.PanelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +244,7 @@
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
         private System.Windows.Forms.Panel PanelMain;
         private System.Windows.Forms.ToolStripProgressBar ProgressBarUploding;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
