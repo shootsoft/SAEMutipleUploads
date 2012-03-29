@@ -24,6 +24,7 @@ namespace SAE_Mutiple_Uploads
         private string nameSpace;
         private Uri uploadUrl;
         private string localPath;
+        private string password;
         private bool isRunning = false;
         private Logger logger;
 
@@ -94,6 +95,15 @@ namespace SAE_Mutiple_Uploads
                 Debug.WriteLine(ex);
                 return;
             }
+
+            password = TextBoxPassword.Text;
+            if (string.IsNullOrEmpty(password) && 
+                MessageBox.Show("无密码上传？","确认") == System.Windows.Forms.DialogResult.No)
+            {
+                return;  
+            }
+
+
             nameSpace = TextBoxNamespace.Text;
             localPath = TextBoxLocalPath.Text;
             if (Directory.Exists(localPath))
@@ -132,7 +142,8 @@ namespace SAE_Mutiple_Uploads
             try
             {
                 Uri dest = new Uri(uploadUrl, "?namespace=" + HttpUtility.UrlEncode(nameSpace)
-                                        + "&dest=" + HttpUtility.UrlEncode(file.Substring(path.Length+1).Replace("\\","/")));
+                                        + "&dest=" + HttpUtility.UrlEncode(file.Substring(path.Length+1).Replace("\\","/"))
+                                        +"&password=" + HttpUtility.UrlEncode(password));
 
                 using (WebClient wc = new WebClient())
                 {

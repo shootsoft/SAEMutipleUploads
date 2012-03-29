@@ -10,15 +10,20 @@
  * 此文件用于SAE Storage的批量上传
  * by http://www.shootsoft.net
  */
-
+ 
+//--配置项--
+//最大文件大小 10MB
+$max_size = 10*1024*1024;
+//密码
+$cfg_password="mypassword";
+//--配置项结束--
 
 //文件保存目录路径
 $domain = $_GET["namespace"];
 $dest = $_GET["dest"];
-//最大文件大小 10MB
-$max_size = 10*1024*1024;
+$password = $_GET["password"];
 //有上传文件时
-if (empty($_FILES) === false) {
+if ( $cfg_password==$password && empty($_FILES) === false) {
 	//原文件名
 	$file_name = $_FILES['file']['name'];
 	//服务器上临时文件名
@@ -44,7 +49,7 @@ if (empty($_FILES) === false) {
     	$file_url = $s->upload( $domain , $new_file_name , $tmp_name);
 	alert($file_url);
 } else {
-	alert('null');
+	alert('密码错误或者无上传文件');
 }
 
 function alert($msg) {
