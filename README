@@ -4,10 +4,14 @@ By http://www.shootsoft.net
 Source https://github.com/shootsoft/SAEMutipleUploads
 
 使用说明：
-配置SAE_PHP 目录下的sae_mutiple_uploads.php文件中的密码配置项
+配置SAE_PHP目录下的sae_mutiple_uploads.php文件中的密码配置项
 将sae_mutiple_uploads.php文件上传到新浪的应用程序目录下
 启动 SAE Mutiple Uploads.exe 
 配置远程Url
 选择要上传的本地路径，点击上传后即开始上传。
 
 日志文件为Upload.log
+
+更新记录：
+2012-02-29 发布0.2版，支持上传密码，更加安全
+2012-03-28 发布0.1版，批量上传，多级目录自动识别
