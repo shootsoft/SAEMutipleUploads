@@ -10,7 +10,7 @@
 //最大文件大小 10MB
 $max_size = 10*1024*1024;
 //密码
-$cfg_password="mypassword";
+$cfg_password="miclwlan";
 //--配置项结束--
 
 //文件保存目录路径
